@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Viaoda+Libre&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dropdown {
+  @apply absolute right-10 top-full mt-3 w-full p-5 rounded-lg bg-white max-w-[210px] flex flex-col gap-4 justify-end items-start;
+}
+
+.dropdown_link {
+  @apply text-sm font-medium text-gray-700 font-dmsans hover:text-gray-500;
+}
