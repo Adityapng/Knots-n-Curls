@@ -11,3 +11,14 @@
 .dropdown_link {
   @apply text-sm font-medium text-gray-700 font-dmsans hover:text-gray-500;
 }
+
+.blur-bubble-1 {
+  /* background-image: radial-gradient(closest-side, #4d00ff, #000); */
+  position: absolute;
+  z-index: -50;
+  right: 0;
+  top: 0;
+  /* background-color: aqua; */
+  /* height: 100dvw;
+  width: 160dvw; */
+}

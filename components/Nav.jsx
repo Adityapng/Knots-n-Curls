@@ -22,7 +22,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className=" fixed w-full px-10 pt-4 pb-2 lg:pt-8 lg:pb-2.5 2xl:pt-16 2xl:pb-5 text-lg font-medium text-white flex justify-between lg:px-20  font-dmsans">
+      <div className=" fixed w-full px-10 pt-4 pb-2 lg:pt-8 lg:pb-2.5 2xl:pt-16 2xl:pb-5 text-[20px] leading-5 font-medium text-white flex justify-between lg:px-20  font-dmsans">
         <Link className="flex items-center " href="/">
           KNOTS & CURLS
         </Link>
