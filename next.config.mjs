@@ -9,6 +9,7 @@ const nextConfig = {
       },
     ],
   },
+
   webpack(config) {
     config.experiments = {
       ...config.experiments,

@@ -12,13 +12,39 @@
   @apply text-sm font-medium text-gray-700 font-dmsans hover:text-gray-500;
 }
 
-.blur-bubble-1 {
-  /* background-image: radial-gradient(closest-side, #4d00ff, #000); */
-  position: absolute;
-  z-index: -50;
-  right: 0;
-  top: 0;
-  /* background-color: aqua; */
-  /* height: 100dvw;
-  width: 160dvw; */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* lenis recomended start */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* lenis recomended end */
+
+.scr-contain {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100dvh;
+}
+.scr-sec {
+  scroll-snap-align: start;
 }
