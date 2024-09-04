@@ -1,6 +1,7 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Image from "next/image";
 import { ScrollTrigger } from "gsap/all";
 import React from "react";
 
@@ -9,23 +10,23 @@ const Motto = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
-    gsap.from(".motto", {
+    gsap.from("#motto", {
       y: 70,
       opacity: 0,
-      duration: 0.7,
+      duration: 1,
       scrollTrigger: {
-        trigger: "#container",
-        start: "top top",
-        markers: false,
+        trigger: "#mottoContainer",
+        start: "50% 1%",
+        markers: true,
+        // scrub: 1,
       },
-      markers: true,
     });
   });
 
   return (
     <section
-      id="container"
-      className="z-50 flex items-center justify-center w-full border border-red-500 scr-sec box h-dvh"
+      id="mottoContainer"
+      className="relative z-50 flex items-center justify-center w-full overflow-hidden h-dvh"
     >
       <p
         id="motto"
@@ -33,6 +34,9 @@ const Motto = () => {
       >
         Designed for You, Styled by Us.
       </p>
+      <div>
+        <Image />
+      </div>
     </section>
   );
 };

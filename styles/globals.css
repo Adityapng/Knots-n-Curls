@@ -40,11 +40,11 @@ html.lenis body {
 
 /* lenis recomended end */
 
-.scr-contain {
+/* .scr-contain {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100dvh;
 }
 .scr-sec {
   scroll-snap-align: start;
-}
+} */
