@@ -6,13 +6,13 @@ import Motto from "@components/Motto";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import BusinessDescription from "@components/BusinessDescription";
+import Services from "@components/Services";
+import WhatWeDo from "@components/WhatWeDo";
+import Hero from "@components/Hero";
 
 const Home = () => {
-  gsap.registerPlugin(useGSAP);
-  gsap.registerPlugin(ScrollTrigger);
-
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -23,73 +23,20 @@ const Home = () => {
 
     requestAnimationFrame(raf);
   }, []);
-
-  useGSAP(() => {
-    gsap.to("#heroText", {
-      scale: 0,
-      opacity: 0,
-      duration: 0.7,
-      delay: 1,
-      scrollTrigger: {
-        pin: true,
-        trigger: "#heroContainer",
-        start: "top top",
-        end: "bottom 50%",
-        // markers: true,
-        scrub: 1,
-      },
-      markers: true,
-    });
-    gsap.to("#btn", {
-      // scale: 0,
-      opacity: 0,
-      scrollTrigger: {
-        // pin: true,
-        trigger: "#heroContainer",
-        start: "top top",
-        end: "bottom 50%",
-        // markers: true,
-        scrub: 1,
-      },
-      // markers: true,
-    });
-  });
-
   return (
     <>
-      <Hero />
-      <Motto />
-      <BusinessDescription />
-      {/* <GalleryParallex />
-      <Introduction /> */}
+      <main>
+        <Hero />
+        <Motto />
+        <BusinessDescription />
+        <Services />
+        <WhatWeDo />
+        <GalleryParallex />
+        <Introduction />
+        <div className=" h-[500dvh]"></div>
+      </main>
     </>
   );
 };
 
 export default Home;
-
-const Hero = () => {
-  return (
-    <>
-      <section
-        id="heroContainer"
-        className="relative flex flex-col justify-center w-full h-screen text-center scr-sec "
-      >
-        <div className="flex items-center justify-center w-full ">
-          <p
-            id="heroText"
-            className=" font-viaoda text-6xl lg:text-[155px] xl:text-[172px]"
-          >
-            Knots & Curls
-          </p>
-        </div>
-        <button
-          id="btn"
-          className="absolute text-2xl right-20 bottom-24 font-dmsans"
-        >
-          Let's Talk
-        </button>
-      </section>
-    </>
-  );
-};
