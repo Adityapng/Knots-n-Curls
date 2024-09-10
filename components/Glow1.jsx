@@ -4,7 +4,7 @@ const Glow1 = () => {
   return (
     <svg
       viewBox="0 0 1125 1252"
-      className="absolute top-[20%] lg:-top-[150px] max-[1023px]:left-0 lg:right-0 -z-50 blur-[100px] lg:blur-[250px] h-[376px] w-[338px] lg:h-[1252px] lg:w-[1125px]"
+      className="absolute top-[2.5%] md:-top-[150px] max-[767px]:left-0 md:right-0 -z-50 blur-[100px] md:blur-[250px] h-[376px] w-[338px] md:h-[1252px] md:w-[1125px]"
     >
       <path
         fill-rule="evenodd"

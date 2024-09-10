@@ -2,7 +2,9 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { signIn, useSession, getProviders } from "next-auth/react";
+import Link from "next/link";
 
 const BusinessDescription = () => {
   const text =
@@ -21,8 +23,6 @@ const BusinessDescription = () => {
           start: "top 70%",
           end: "bottom 80%",
           scrub: 1,
-          markers: true,
-          // pin: "#effect",
         },
       });
 
@@ -40,10 +40,23 @@ const BusinessDescription = () => {
     return () => contextDescription.revert();
   }, []);
 
+  const { data: session } = useSession();
+  const [providers, setProviders] = useState(null);
+
+  useEffect(() => {
+    const setUpProviders = async () => {
+      const response = await getProviders();
+
+      setProviders(response);
+    };
+
+    setUpProviders();
+  }, []);
+
   return (
     <section
       id="businessDescription"
-      className="flex items-center w-full h-screen p-6 bg-slate-500 "
+      className="flex items-center w-full h-screen p-6 "
     >
       <div
         id="effect"
@@ -51,17 +64,38 @@ const BusinessDescription = () => {
         className="flex flex-col lg:pl-[25%] gap-10 "
       >
         <div>
-          <p className=" font-dmsans text-3xl lg:text-[64px] leading-10 lg:leading-[90px]">
+          <p className=" font-dmsans text-3xl md:text-5xl xl:text-[64px] leading-10 md:leading-[64px] xl:leading-[90px]">
             <CharacterList text={text} />
           </p>
         </div>
         <div>
-          <button
-            ref={bookButton}
-            className="px-6 py-4 text-white rounded-full bg-zinc-800 active:bg-zinc-900"
-          >
-            Book an appointment
-          </button>
+          {session?.user ? (
+            <>
+              <button
+                ref={bookButton}
+                className="px-6 py-4 text-white rounded-full bg-zinc-800 font-poppins active:bg-zinc-900"
+              >
+                Book an appointment
+              </button>
+            </>
+          ) : (
+            <>
+              {providers &&
+                Object.values(providers).map((provider) => (
+                  <Link href="/book-appointment">
+                    <button
+                      className="px-6 py-4 text-white rounded-full cursor-pointer bg-zinc-800 font-poppins active:bg-zinc-900"
+                      type="button"
+                      id="button"
+                      key={provider.name}
+                      onClick={() => signIn(provider.id)}
+                    >
+                      Book an appointment
+                    </button>
+                  </Link>
+                ))}
+            </>
+          )}
         </div>
       </div>
     </section>

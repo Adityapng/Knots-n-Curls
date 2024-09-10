@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         viaoda: ["Viaoda Libre", "serif"],
+        poppins: ["Poppins", "sans-serif"],
         dmsans: ["DM Sans", "sans-serif"],
       },
     },

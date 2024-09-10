@@ -1,7 +1,9 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React, { useLayoutEffect, useRef } from "react";
+import { signIn, useSession, getProviders } from "next-auth/react";
+import Link from "next/link";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 const Hero = () => {
   gsap.registerPlugin(useGSAP);
@@ -27,14 +29,13 @@ const Hero = () => {
             start: "top top",
             end: "bottom 60%",
             scrub: 1,
-            // markers: true,
           },
         },
         0
       );
 
       tlHero.to(
-        button.current,
+        "#button",
         {
           opacity: 0,
           scrollTrigger: {
@@ -51,6 +52,19 @@ const Hero = () => {
     return () => contextHero.revert();
   }, []);
 
+  const { data: session } = useSession();
+  const [providers, setProviders] = useState(null);
+
+  useEffect(() => {
+    const setUpProviders = async () => {
+      const response = await getProviders();
+
+      setProviders(response);
+    };
+
+    setUpProviders();
+  }, []);
+
   return (
     <>
       <section
@@ -62,18 +76,37 @@ const Hero = () => {
           <p
             id="heroText"
             ref={heroText}
-            className=" bg-slate-500 font-viaoda text-6xl lg:text-[155px] xl:text-[172px]"
+            className="  font-viaoda text-6xl lg:text-[155px] xl:text-[172px]"
           >
             Knots & Curls
           </p>
         </div>
-        <button
-          id="btn"
-          ref={button}
-          className="absolute text-2xl right-20 bottom-24 font-dmsans"
-        >
-          Let's Talk
-        </button>
+        <div className="absolute bottom-7 right-7 lg:right-20 lg:bottom-24">
+          {session?.user ? (
+            <>
+              <Link href="/book-appointment">
+                <button id="button" className="text-2xl font-dmsans">
+                  Book an appointment
+                </button>
+              </Link>
+            </>
+          ) : (
+            <>
+              {providers &&
+                Object.values(providers).map((provider) => (
+                  <button
+                    className="text-2xl cursor-pointer font-dmsans "
+                    type="button"
+                    id="button"
+                    key={provider.name}
+                    onClick={() => signIn(provider.id)}
+                  >
+                    Book an appointment
+                  </button>
+                ))}
+            </>
+          )}
+        </div>
       </section>
     </>
   );

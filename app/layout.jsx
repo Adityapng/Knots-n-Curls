@@ -13,7 +13,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body className="text-white bg-black ">
+      <body className="text-[#D9D9D9] bg-black ">
         <Provider>
           <div className=" main">
             <div className="gradient" />

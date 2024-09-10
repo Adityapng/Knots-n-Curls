@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Viaoda+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -64,4 +65,14 @@ html.lenis body {
   position: absolute;
   height: 200px;
   width: 275px;
+}
+
+/* #link:hover ~ #cursor {
+  transform: scale(6);
+} */
+
+.scale {
+  /* transform: scale(6); */
+  height: 100px;
+  width: 100px;
 }

@@ -11,6 +11,7 @@ import BusinessDescription from "@components/BusinessDescription";
 import Services from "@components/Services";
 import WhatWeDo from "@components/WhatWeDo";
 import Hero from "@components/Hero";
+import Footer from "@components/Footer";
 
 const Home = () => {
   useEffect(() => {
@@ -25,7 +26,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      <main>
+      <main className="">
         <Hero />
         <Motto />
         <BusinessDescription />
@@ -33,7 +34,7 @@ const Home = () => {
         <WhatWeDo />
         <GalleryParallex />
         <Introduction />
-        <div className=" h-[500dvh]"></div>
+        <Footer />
       </main>
     </>
   );

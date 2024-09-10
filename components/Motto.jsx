@@ -30,8 +30,6 @@ const Motto = () => {
           trigger: mottoContainer.current,
           start: "top top",
           end: "bottom 60%",
-          // markers: true,
-          // scrub: 1,
           pin: true,
         },
       });
@@ -61,14 +59,14 @@ const Motto = () => {
 
   const itemPositions = [
     { top: "-5%", left: "5%" },
-    { top: "40%", left: "-5%" },
     { top: "25%", left: "20%" },
-    { top: "60%", left: "40%" },
+    { top: "40%", left: "-5%" },
     { top: "70%", left: "10%" },
+    { top: "60%", left: "40%" },
     { top: "-10%", left: "65%" },
     { top: "10%", left: "85%" },
-    { top: "40%", left: "60%" },
     { top: "80%", left: "70%" },
+    { top: "40%", left: "60%" },
     { top: "50%", left: "95%" },
   ];
 
@@ -81,7 +79,7 @@ const Motto = () => {
 
         const deltaX = (e.clientX - window.innerWidth / 2) * animationFactor;
         const deltaY = (e.clientY - window.innerHeight / 2) * animationFactor;
-        console.log(deltaX, deltaY);
+        // console.log(deltaX, deltaY);
         gsap.to(item, { x: deltaX, y: deltaY, duration: 0.75 });
       });
     };
@@ -111,7 +109,7 @@ const Motto = () => {
             key={index} // Add key for better React performance
             className={`item ${
               itemData.orientation === 0 ? "itemPortrait" : "itemLandscape"
-            }`}
+            } ${index % 2 === 0 ? "hidden md:flex" : "flex"}`}
             style={{
               top: itemPositions[index].top,
               left: itemPositions[index].left,
