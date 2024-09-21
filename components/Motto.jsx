@@ -119,7 +119,7 @@ const Motto = () => {
               id="img"
               className="object-cover w-full h-full opacity-50"
               src={itemData.img}
-              alt=""
+              alt="parallax image"
             />
           </div>
         ))}

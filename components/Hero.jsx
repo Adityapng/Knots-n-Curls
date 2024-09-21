@@ -81,12 +81,12 @@ const Hero = () => {
             Knots & Curls
           </p>
         </div>
-        <div className="absolute bottom-7 right-7 lg:right-20 lg:bottom-24">
+        <div className="absolute flex justify-center w-full bottom-40 lg:bottom-40">
           {session?.user ? (
             <>
               <Link href="/book-appointment">
-                <button id="button" className="text-2xl font-dmsans">
-                  Book an appointment
+                <button id="button" className="text-xl sm:text-2xl font-dmsans">
+                  Book an appointment now
                 </button>
               </Link>
             </>
@@ -95,13 +95,13 @@ const Hero = () => {
               {providers &&
                 Object.values(providers).map((provider) => (
                   <button
-                    className="text-2xl cursor-pointer font-dmsans "
+                    className="text-xl cursor-pointer sm:text-2xl font-dmsans"
                     type="button"
                     id="button"
                     key={provider.name}
                     onClick={() => signIn(provider.id)}
                   >
-                    Book an appointment
+                    Book an appointment now
                   </button>
                 ))}
             </>

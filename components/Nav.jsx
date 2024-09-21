@@ -22,7 +22,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className=" z-50 fixed w-screen px-4 pt-4 pb-2 lg:pt-8 lg:pb-2.5 2xl:pt-16 2xl:pb-5 text-base lg:text-[20px] leading-5 font-medium text-white flex justify-between lg:px-20  font-dmsans">
+      <div className=" z-50 fixed w-screen px-4 pt-4 pb-2 lg:pt-6 lg:pb-2.5 2xl:pt-6 2xl:pb-5   lg:px-10 text-base lg:text-[20px] leading-5 font-medium text-white flex justify-between  font-dmsans">
         <Link className="flex items-center " href="/">
           KNOTS & CURLS
         </Link>
@@ -52,6 +52,7 @@ const Nav = () => {
                   height={40}
                   className="object-contain rounded-full cursor-pointer"
                   onClick={() => setToggleDropdown((prev) => !prev)}
+                  alt="Profile Image"
                 />
                 {toggleDropdown && (
                   <div className=" dropdown">
@@ -109,6 +110,7 @@ const Nav = () => {
                 height={40}
                 className="object-contain rounded-full cursor-pointer"
                 onClick={() => setToggleDropdown((prev) => !prev)}
+                alt="Profile Image"
               />
               {toggleDropdown && (
                 <div className=" dropdown">
