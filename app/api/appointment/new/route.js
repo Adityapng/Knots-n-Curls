@@ -18,6 +18,7 @@ export const POST = async (req) => {
 
     return new Response(JSON.stringify(newBooking), { status: 201 });
   } catch (error) {
+    console.log(error);
     return new Response("Failed to create a new booking", { status: 500 });
   }
 };

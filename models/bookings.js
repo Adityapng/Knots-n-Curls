@@ -19,7 +19,7 @@ const BookingSchema = new Schema({
     required: [true, "Date is required!"],
   },
   service: {
-    type: String,
+    type: Array,
     required: [true, "Service is required!"],
   },
 });
