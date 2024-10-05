@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-const skinCare = "/assets/image/skincare.png";
-const hair = "/assets/image/hair.png";
+const bridal = "/assets/image/bridal.jpg";
 const makeUp = "/assets/image/makeup.png";
+const commercial = "/assets/image/commerciall.jpg";
 
 const WhatWeDo = () => {
   return (
@@ -15,7 +15,7 @@ const WhatWeDo = () => {
         <div className="flex flex-col lg:flex-row gap-7 xl:gap-14 ">
           <div className="relative rounded-xl overflow-hidden  h-[150px] w-[300px]  lg:h-[288px] lg:w-[200px] xl:h-[432px] xl:w-[300px] md:h-[200px] md:w-[500px]">
             <Image
-              src={skinCare}
+              src={bridal}
               className="object-cover w-full h-full transition-all duration-300 hover:scale-110 "
               width={350}
               height={505}
@@ -28,7 +28,7 @@ const WhatWeDo = () => {
 
           <div className="relative rounded-xl overflow-hidden  h-[150px] w-[300px]  lg:h-[288px] lg:w-[200px] xl:h-[432px] xl:w-[300px] md:h-[200px] md:w-[500px]">
             <Image
-              src={hair}
+              src={makeUp}
               className="object-cover w-full h-full transition-all duration-300 hover:scale-110 "
               width={350}
               height={505}
@@ -41,7 +41,7 @@ const WhatWeDo = () => {
 
           <div className="relative rounded-xl overflow-hidden h-[150px] w-[300px]  lg:h-[288px] lg:w-[200px] xl:h-[432px] xl:w-[300px] md:h-[200px] md:w-[500px]">
             <Image
-              src={makeUp}
+              src={commercial}
               className="object-cover w-full h-full transition-all duration-300 hover:scale-110 "
               width={350}
               height={505}

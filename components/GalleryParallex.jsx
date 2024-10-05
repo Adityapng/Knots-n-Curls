@@ -12,56 +12,56 @@ const GalleryParallex = () => {
     {
       col1: [
         { img: "/assets/image/hair.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
+        { img: "/assets/image/1.jpeg" },
+        { img: "/assets/image/2.jpeg" },
+        { img: "/assets/image/3.jpeg" },
+        { img: "/assets/image/4.jpeg" },
+        { img: "/assets/image/5.jpeg" },
+        { img: "/assets/image/6.jpeg" },
       ],
     },
     {
       col2: [
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
+        { img: "/assets/image/7.jpeg" },
+        { img: "/assets/image/8.jpeg" },
+        { img: "/assets/image/9.jpeg" },
+        { img: "/assets/image/10.jpeg" },
+        { img: "/assets/image/11.jpeg" },
+        { img: "/assets/image/12.jpeg" },
         { img: "/assets/image/hair.png" },
       ],
     },
     {
       col3: [
         { img: "/assets/image/hair.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
+        { img: "/assets/image/13.jpeg" },
+        { img: "/assets/image/14.jpeg" },
+        { img: "/assets/image/15.jpeg" },
+        { img: "/assets/image/16.jpeg" },
+        { img: "/assets/image/17.jpeg" },
+        { img: "/assets/image/18.jpeg" },
       ],
     },
     {
       col4: [
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
+        { img: "/assets/image/19.jpeg" },
+        { img: "/assets/image/20.jpeg" },
+        { img: "/assets/image/21.jpeg" },
+        { img: "/assets/image/22.jpeg" },
+        { img: "/assets/image/23.jpeg" },
+        { img: "/assets/image/24.jpeg" },
         { img: "/assets/image/hair.png" },
       ],
     },
     {
       col5: [
         { img: "/assets/image/hair.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
-        { img: "/assets/image/parallaxTestImage.png" },
+        { img: "/assets/image/25.jpeg" },
+        { img: "/assets/image/26.jpg" },
+        { img: "/assets/image/16.jpeg" },
+        { img: "/assets/image/3.jpeg" },
+        { img: "/assets/image/7.jpeg" },
+        { img: "/assets/image/8.jpeg" },
       ],
     },
   ];
@@ -142,7 +142,7 @@ const GalleryParallex = () => {
                 key={imgIndex}
                 src={item.img}
                 alt={`Parallax Image ${imgIndex + 1}`}
-                className={`w-[272px] min `}
+                className={`w-[272px] opacity-80 `}
               />
             ))}
           </div>
