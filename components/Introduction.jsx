@@ -39,9 +39,12 @@ const Introduction = () => {
                   next generation of beauty professionals.
                 </p>
               </div>
-              <button className="px-5 py-3 rounded-full bg-zinc-800 font-poppins">
+              <a
+                href="tel:8368855275"
+                className="px-5 py-3 rounded-full bg-zinc-800 font-poppins"
+              >
                 Hop on a call
-              </button>
+              </a>
             </div>
           </div>
         </div>
