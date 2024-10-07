@@ -81,12 +81,17 @@ const Hero = () => {
             Knots & Curls
           </p>
         </div>
-        <div className="absolute flex justify-center w-full bottom-40 lg:bottom-40">
+        <div className="absolute flex justify-center w-full gap-10 bottom-40 lg:bottom-40">
           {session?.user ? (
             <>
               <Link href="/book-appointment">
                 <button id="button" className="text-xl sm:text-2xl font-dmsans">
                   Book an appointment now
+                </button>
+              </Link>
+              <Link href="/profile/appointments">
+                <button id="button" className="text-xl sm:text-2xl font-dmsans">
+                  My appointments
                 </button>
               </Link>
             </>
