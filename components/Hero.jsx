@@ -81,7 +81,7 @@ const Hero = () => {
             Knots & Curls
           </p>
         </div>
-        <div className="absolute flex justify-center w-full gap-10 bottom-40 lg:bottom-40">
+        <div className="absolute flex justify-center w-full gap-10 max-md:flex-col bottom-40 lg:bottom-40">
           {session?.user ? (
             <>
               <Link href="/book-appointment">

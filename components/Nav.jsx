@@ -41,10 +41,6 @@ const Nav = () => {
                 About
               </Link>
 
-              <Link className="flex items-center " href="/contact">
-                Contact
-              </Link>
-
               <div>
                 <Image
                   src={session?.user.image}
@@ -108,7 +104,7 @@ const Nav = () => {
                 src={session?.user.image}
                 width={40}
                 height={40}
-                className="object-contain rounded-full cursor-pointer"
+                className="object-contain border-2 border-white rounded-full cursor-pointer"
                 onClick={() => setToggleDropdown((prev) => !prev)}
                 alt="Profile Image"
               />
@@ -135,13 +131,7 @@ const Nav = () => {
                   >
                     About
                   </Link>
-                  <Link
-                    href="/contact"
-                    className="dropdown_link "
-                    onClick={() => setToggleDropdown(false)}
-                  >
-                    Contact
-                  </Link>
+
                   <button
                     onClick={() => {
                       setToggleDropdown(false);
