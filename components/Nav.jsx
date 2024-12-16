@@ -46,7 +46,7 @@ const Nav = () => {
                   src={session?.user.image}
                   width={40}
                   height={40}
-                  className="object-contain border-2 border-white rounded-full cursor-pointer"
+                  className="object-contain border-2 border-white rounded-full cursor-pointer "
                   onClick={() => setToggleDropdown((prev) => !prev)}
                   alt="Profile Image"
                 />

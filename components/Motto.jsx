@@ -7,16 +7,56 @@ import React, { useLayoutEffect, useRef } from "react";
 
 const Motto = () => {
   const items = [
-    { img: "/assets/image/skincare.png", parallexSpeed: 0.04, orientation: 0 },
-    { img: "/assets/image/skincare.png", parallexSpeed: 0.1, orientation: 1 },
-    { img: "/assets/image/skincare.png", parallexSpeed: 0.05, orientation: 0 },
-    { img: "/assets/image/skincare.png", parallexSpeed: 0.07, orientation: 1 },
-    { img: "/assets/image/skincare.png", parallexSpeed: 0.2, orientation: 0 },
-    { img: "/assets/image/skincare.png", parallexSpeed: 0.065, orientation: 1 },
-    { img: "/assets/image/skincare.png", parallexSpeed: 0.042, orientation: 0 },
-    { img: "/assets/image/skincare.png", parallexSpeed: 0.042, orientation: 1 },
-    { img: "/assets/image/skincare.png", parallexSpeed: 0.15, orientation: 0 },
-    { img: "/assets/image/skincare.png", parallexSpeed: 0.06, orientation: 1 },
+    {
+      img: "/assets/motto parallax/1.jpeg",
+      parallexSpeed: 0.04,
+      orientation: 0,
+    },
+    {
+      img: "/assets/motto parallax/2.jpeg",
+      parallexSpeed: 0.1,
+      orientation: 1,
+    },
+    {
+      img: "/assets/motto parallax/3.jpeg",
+      parallexSpeed: 0.05,
+      orientation: 0,
+    },
+    {
+      img: "/assets/motto parallax/4.jpeg",
+      parallexSpeed: 0.07,
+      orientation: 1,
+    },
+    {
+      img: "/assets/motto parallax/5.jpeg",
+      parallexSpeed: 0.2,
+      orientation: 0,
+    },
+    {
+      img: "/assets/motto parallax/6.jpeg",
+      parallexSpeed: 0.065,
+      orientation: 1,
+    },
+    {
+      img: "/assets/motto parallax/7.jpeg",
+      parallexSpeed: 0.042,
+      orientation: 0,
+    },
+    {
+      img: "/assets/motto parallax/8.jpeg",
+      parallexSpeed: 0.042,
+      orientation: 1,
+    },
+    {
+      img: "/assets/motto parallax/9.jpeg",
+      parallexSpeed: 0.15,
+      orientation: 0,
+    },
+    {
+      img: "/assets/motto parallax/10.jpeg",
+      parallexSpeed: 0.06,
+      orientation: 1,
+    },
   ];
   const mottoContainer = useRef(null);
   const motto = useRef(null);

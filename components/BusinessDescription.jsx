@@ -82,12 +82,11 @@ const BusinessDescription = () => {
             <>
               {providers &&
                 Object.values(providers).map((provider) => (
-                  <Link href="/book-appointment">
+                  <Link href="/book-appointment" key={provider.name}>
                     <button
                       className="px-6 py-4 text-white rounded-full cursor-pointer bg-zinc-800 font-poppins active:bg-zinc-900"
                       type="button"
-                      id="button"
-                      key={provider.name}
+                      ref={bookButton}
                       onClick={() => signIn(provider.id)}
                     >
                       Book an appointment
