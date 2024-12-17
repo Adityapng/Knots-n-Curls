@@ -15,10 +15,6 @@ const RootLayout = ({ children }) => {
     <html lang="en" className=" dark">
       <body className="text-[#D9D9D9] bg-black ">
         <Provider>
-          <div className=" main">
-            <div className="gradient" />
-          </div>
-
           <main className="relative app">
             <Nav />
             <Glow1 />

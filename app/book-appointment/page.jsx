@@ -30,6 +30,7 @@ const page = () => {
     email: "",
     phoneNumber: "",
     service: "",
+    attended: false,
   });
 
   const services = [
@@ -110,6 +111,7 @@ const page = () => {
           email: appointment.email,
           userID: session?.user.id,
           service: appointment.service,
+          attended: appointment.attended, //added
         }),
       });
       if (response.ok) {

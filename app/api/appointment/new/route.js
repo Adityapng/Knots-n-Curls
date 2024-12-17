@@ -2,7 +2,8 @@ import { connectToDB } from "@utils/database";
 import Booking from "@models/bookings";
 
 export const POST = async (req) => {
-  const { date, phoneNumber, name, email, userID, service } = await req.json();
+  const { date, phoneNumber, name, email, userID, service, attended } =
+    await req.json();
 
   try {
     await connectToDB();
@@ -13,6 +14,7 @@ export const POST = async (req) => {
       email: email,
       date: date,
       service: service,
+      attended: attended, //added
     });
     await newBooking.save();
 

@@ -22,6 +22,10 @@ const BookingSchema = new Schema({
     type: Array,
     required: [true, "Service is required!"],
   },
+  attended: {
+    type: Boolean,
+    required: [true, "Attended is required"],
+  }, //added
 });
 
 const Booking = models.Booking || model("Booking", BookingSchema);
