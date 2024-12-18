@@ -35,7 +35,7 @@ const Motto = () => {
     {
       img: "/assets/motto parallax/6.jpeg",
       parallexSpeed: 0.065,
-      orientation: 1,
+      orientation: 0,
     },
     {
       img: "/assets/motto parallax/7.jpeg",
@@ -147,9 +147,9 @@ const Motto = () => {
         {items.map((itemData, index) => (
           <div
             key={index} // Add key for better React performance
-            className={`item ${
-              itemData.orientation === 0 ? "itemPortrait" : "itemLandscape"
-            } ${index % 2 === 0 ? "hidden md:flex" : "flex"}`}
+            className={`item scale-50 md:scale-100  ${
+              itemData.orientation === 0 ? "itemPortrait" : "itemLandscape "
+            } `}
             style={{
               top: itemPositions[index].top,
               left: itemPositions[index].left,
@@ -157,7 +157,7 @@ const Motto = () => {
           >
             <img
               id="img"
-              className="object-cover w-full h-full opacity-50"
+              className="object-cover object-top w-full h-full opacity-50 "
               src={itemData.img}
               alt="parallax image"
             />

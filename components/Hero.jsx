@@ -89,11 +89,11 @@ const Hero = () => {
                   Book an appointment now
                 </button>
               </Link>
-              <Link href="/profile/appointments">
+              {/* <Link href="/profile/appointments">
                 <button id="button" className="text-xl sm:text-2xl font-dmsans">
                   My appointments
                 </button>
-              </Link>
+              </Link> */}
             </>
           ) : (
             <>
